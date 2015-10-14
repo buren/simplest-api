@@ -1,7 +1,8 @@
-<img class="natural-image" src="images/tb-logo.png">
+<img class="natural-image" src="images/tb-logo.png" style="max-width:400px">
+
+_Goto_: http://jacobburenstam.com/simplest-api
 
 ```ruby
-# GOTO: jacobburenstam.com/simplest-api
 include LTH
 author = Presenter.new(:jacob)
 slides = SimplestAPI::Slides.new
@@ -140,6 +141,8 @@ in <span class="highlight">10 days</span>
 
 May 1995 by Brendan Eich.."
 
+:watch:
+
 ---
 
 ## Definite guide vs Good parts
@@ -270,13 +273,34 @@ This actually makes the previous code work :trollface:
 
 ---
 
-## Thank you for listening.
+```
+$.getJSON('https://api.github.com/emojis', function(emojis, textStatus) {
+  var makeImg = function(src) { return '<img src="' + src + '" />'; };
+  for (var name in emojis) {
+    $('body').prepend(makeImg(emojis[name]));
+  }
+});
+```
+
+<button onclick="emojiOverload()">Emoji overload</button>
+
+:warning: Will perform ~900 requests
+
+---
+
+Be careful when you make automated requests.
+
+I got banned from Google for ~6 hours, after making 15k requests in a few miniutes.
 
 ---
 
 # Questions?
 
 <img class="natural-image" src="images/tb-logo.png"/>
+
+---
+
+# Lets code
 
 ---
 
@@ -306,6 +330,7 @@ This actually makes the previous code work :trollface:
 <script src="js/log.js"></script>
 <script src="js/resize-hack.js"></script>
 
+<script src="js/github-emoji-overload.js"></script>
 <script src="js/poller.js"></script>
 <script>
   PollerConfig = { url: 'https://throwawaypoll.herokuapp.com' };
