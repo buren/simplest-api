@@ -1,8 +1,9 @@
 <section>
 
-<p><img class="natural-image" src="images/tb-logo.png"></p>
-<pre><code class="ruby"># GOTO: jacobburenstam.com/simplest-api
-include LTH
+<p><img class="natural-image" src="images/tb-logo.png" style="max-width:400px"></p>
+
+<p><em>Goto</em>: <a href="http://jacobburenstam.com/simplest-api">http://jacobburenstam.com/simplest-api</a></p>
+<pre><code class="ruby">include LTH
 author = Presenter.new(:jacob)
 slides = SimplestAPI::Slides.new
 
@@ -166,6 +167,8 @@ end
 
 <p>May 1995 by Brendan Eich.."</p>
 
+<p><img class="emoji" alt=":watch:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/231a.png"></p>
+
 </section>
 <section>
 
@@ -307,8 +310,23 @@ end
 
 </section>
 <section>
+<pre><code>$.getJSON('https://api.github.com/emojis', function(emojis, textStatus) {
+  var makeImg = function(src) { return '&lt;img src="' + src + '" /&gt;'; };
+  for (var name in emojis) {
+    $('body').prepend(makeImg(emojis[name]));
+  }
+});
+</code></pre>
+<p><button onclick="emojiOverload()">Emoji overload</button></p>
 
-<h2>Thank you for listening.</h2>
+<p><img class="emoji" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png"> Will perform ~900 requests</p>
+
+</section>
+<section>
+
+<p>Be careful when you make automated requests.</p>
+
+<p>I got banned from Google for ~6 hours, after making 15k requests in a few miniutes.</p>
 
 </section>
 <section>
@@ -316,6 +334,11 @@ end
 <h1>Questions?</h1>
 
 <p><img class="natural-image" src="images/tb-logo.png"></p>
+
+</section>
+<section>
+
+<h1>Lets code</h1>
 
 </section>
 <section>
@@ -356,6 +379,8 @@ end
 <script src="js/log.js"></script>
 
 <script src="js/resize-hack.js"></script>
+
+<script src="js/github-emoji-overload.js"></script>
 
 <script src="js/poller.js"></script>
 
