@@ -1,4 +1,4 @@
-# Always be hacking - Slides
+# Simplest API - Slides
 
 _Note_: The slides come with an open source server implementation. You can deploy it with one click over at [buren/abh-server](https://github.com/buren.abh-server), in a few minutes, without any additional configuration.
 
